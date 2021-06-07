@@ -5,7 +5,7 @@ public class Steck {
     int []massiv;
     int vershina;
     // ДОБАВЛЕНИЕ, ИЗВЛЕЧЕНИЕ, ЧТЕНИЕ, ПОЛНОТА СТЕКА, ПУСТ СТЕК
-
+    //      +          +           +                      +
     //конструктор по умолчанию//
     public Steck(){
         razmer=1;
@@ -62,6 +62,21 @@ public class Steck {
             System.out.println(massiv[i]);
         }
     }
-
+    //Извлечь с вершины стека
+    public void extract(){
+        if(this.pustota()==false) {
+            massiv[vershina] = 0;
+            vershina -= 1;
+            razmer -= 1;
+        }else {
+            System.out.println("Ошибка данных");// пока не умею исключения делать
+        }
+    }
+    //СТЕК ПУСТ
+    public boolean pustota(){
+        if(vershina==-1&&razmer==0){
+            return true;
+        }else return false;
+    }
 
 }

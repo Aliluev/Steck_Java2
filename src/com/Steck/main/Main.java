@@ -6,5 +6,12 @@ public class Main {
         B.pechat();
         B.Add(4);//тестирование добавления
         B.pechat();
+        B.extract();
+        B.pechat();
+        System.out.println(B.pustota());
+        B.extract();
+        System.out.println(B.pustota());
+        B.extract();//ошибка данных
+        System.out.println(B.pustota());
     }
 }
